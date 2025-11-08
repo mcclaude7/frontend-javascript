@@ -87,4 +87,3 @@ export function teachClass(todayClass: Subjects): string {
   }
 }
 
-
