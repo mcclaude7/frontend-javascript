@@ -69,12 +69,22 @@ export function isDirector(employee: Director | Teacher): employee is Director{
 //     return 'Teaching History';
 //   }
 // }
+// export type Subjects = 'Math' | 'History';
+
+// export function teachClass(todayClass: Subjects): string {
+//   if (todayClass === 'Math') {
+//     return 'Teaching Math';
+//   } 
+//   return 'Teaching History';
+// }
 export type Subjects = 'Math' | 'History';
 
 export function teachClass(todayClass: Subjects): string {
   if (todayClass === 'Math') {
     return 'Teaching Math';
-  } 
-  return 'Teaching History';
+  } else {
+    return 'Teaching History';
+  }
 }
+
 
