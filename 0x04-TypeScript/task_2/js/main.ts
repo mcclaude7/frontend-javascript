@@ -58,9 +58,9 @@ export function isDirector(employee: Director | Teacher): employee is Director{
     }
 }
 
-export type Subjects = "Math" | "History";
+type Subjects = "Math" | "History"; // Subjects
 
-export function teachClass(todayClass:Subjects): string {
+function teachClass(todayClass:Subjects): string {
     if (todayClass === "Math") {
         return "Teaching Math";
     } else if (todayClass === "History") {
