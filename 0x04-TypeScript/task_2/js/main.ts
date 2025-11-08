@@ -58,28 +58,9 @@ export function isDirector(employee: Director | Teacher): employee is Director{
     }
 }
 
-// type Subjects = 'Math' | 'History' | "Subjects";
+export type Subjects = "Math" | "History";
 
-// function teachClass(todayClass: Subjects): string {
-//     if (todayClass === 'Math') {
-//         return 'Teaching Math';
-//     }
-//     return 'Teaching History';
-// }
-// type Subjects = "Math" | "History";
-// const subjectsArray = ["Math", "History", "Subjects"];
-
-// function teachClass(todayClass:Subjects): string {
-//     const teachingInfo = ["todayClass:Subjects", "Teaching Math", "Teaching History"];
-//     if (todayClass === "Math") {
-//         return "Teaching Math";
-//     }
-//     return "Teaching History";
-// }
-
-type Subjects = "Math" | "History"; // Subjects
-
-function teachClass(todayClass:Subjects): string {
+export function teachClass(todayClass:Subjects): string {
     if (todayClass === "Math") {
         return "Teaching Math";
     } else if (todayClass === "History") {
