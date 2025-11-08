@@ -58,14 +58,23 @@ export function isDirector(employee: Director | Teacher): employee is Director{
     }
 }
 
-// ✅ String literal type for allowed subjects
+// // ✅ String literal type for allowed subjects
+// export type Subjects = 'Math' | 'History';
+
+// // ✅ teachClass function
+// export function teachClass(todayClass: Subjects): string {
+//   if (todayClass === 'Math') {
+//     return 'Teaching Math';
+//   } else {
+//     return 'Teaching History';
+//   }
+// }
 export type Subjects = 'Math' | 'History';
 
-// ✅ teachClass function
 export function teachClass(todayClass: Subjects): string {
   if (todayClass === 'Math') {
     return 'Teaching Math';
-  } else {
-    return 'Teaching History';
-  }
+  } 
+  return 'Teaching History';
 }
+
