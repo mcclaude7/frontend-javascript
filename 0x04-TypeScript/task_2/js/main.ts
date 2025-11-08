@@ -106,18 +106,29 @@ export function isDirector(employee: Director | Teacher): employee is Director{
 // console.log(teachClass(HISTORY)); // Teaching History
 
 // Define constants for the classes
-const CLASS_M = 'Math' as const;
-const CLASS_H = 'History' as const;
+// const CLASS_M = 'Math' as const;
+// const CLASS_H = 'History' as const;
 
-// Define the string literal type indirectly
-type Subjects = typeof CLASS_M | typeof CLASS_H;
+// // Define the string literal type indirectly
+// type Subjects = typeof CLASS_M | typeof CLASS_H;
 
-// teachClass function
-export function teachClass(todayClass: Subjects): string {
-  return `Teaching ${todayClass}`;
+// // teachClass function
+// export function teachClass(todayClass: Subjects): string {
+//   return `Teaching ${todayClass}`;
+// }
+
+// // Example usage
+// console.log(teachClass(CLASS_M));   // Teaching Math
+// console.log(teachClass(CLASS_H));   // Teaching History
+
+// Indirect string literal type using consts
+const M = 'Math' as const;
+const H = 'History' as const;
+
+// String literal type inferred from consts
+type S = typeof M | typeof H;
+
+// Function that dynamically constructs the string
+function teachClass(today: S): string {
+  return `Teaching ${today}`;
 }
-
-// Example usage
-console.log(teachClass(CLASS_M));   // Teaching Math
-console.log(teachClass(CLASS_H));   // Teaching History
-
