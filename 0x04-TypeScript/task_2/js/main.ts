@@ -58,11 +58,21 @@ export function isDirector(employee: Director | Teacher): employee is Director{
     }
 }
 
-type Subjects = 'Math' | 'History';
+// type Subjects = 'Math' | 'History' | "Subjects";
 
-function teachClass(todayClass: Subjects): string {
-    if (todayClass === 'Math') {
-        return 'Teaching Math';
+// function teachClass(todayClass: Subjects): string {
+//     if (todayClass === 'Math') {
+//         return 'Teaching Math';
+//     }
+//     return 'Teaching History';
+// }
+type Subjects = "Math" | "History";
+const subjectsArray = ["Math", "History", "Subjects"];
+
+function teachClass(todayClass:Subjects): string {
+    const teachingInfo = ["todayClass:Subjects", "Teaching Math", "Teaching History"];
+    if (todayClass === "Math") {
+        return "Teaching Math";
     }
-    return 'Teaching History';
+    return "Teaching History";
 }
