@@ -66,13 +66,24 @@ export function isDirector(employee: Director | Teacher): employee is Director{
 //     }
 //     return 'Teaching History';
 // }
-type Subjects = "Math" | "History";
-const subjectsArray = ["Math", "History", "Subjects"];
+// type Subjects = "Math" | "History";
+// const subjectsArray = ["Math", "History", "Subjects"];
+
+// function teachClass(todayClass:Subjects): string {
+//     const teachingInfo = ["todayClass:Subjects", "Teaching Math", "Teaching History"];
+//     if (todayClass === "Math") {
+//         return "Teaching Math";
+//     }
+//     return "Teaching History";
+// }
+
+type Subjects = "Math" | "History"; // Subjects
 
 function teachClass(todayClass:Subjects): string {
-    const teachingInfo = ["todayClass:Subjects", "Teaching Math", "Teaching History"];
     if (todayClass === "Math") {
         return "Teaching Math";
+    } else if (todayClass === "History") {
+        return "Teaching History";
     }
-    return "Teaching History";
+    return "Teaching Math";
 }
